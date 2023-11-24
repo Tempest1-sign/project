@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my To-Do List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #todoContainer {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        #taskName {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #todoList {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #todoList li {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        #todoList li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="todoContainer">
+        <h2>My To-Do List</h2>
+        <form id="todoForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" required>
+            <input type="submit" value="Add Task">
+        </form>
+        <ul id="todoList"></ul>
+    </div>
+
+    <script>
+        document.getElementById('todoForm').addEventListener('submit', handleFormData);
+
+        function handleFormData(event) {
+            event.preventDefault();
+            var taskName = document.getElementById('taskName').value;
+            var todoList = document.getElementById('todoList');
+            var newTodo = document.createElement('li');
+            newTodo.innerText = taskName;
+            todoList.appendChild(newTodo);
+            document.getElementById('taskName').value = ''; // Clear the input after adding a task
+        }
+    </script>
+</body>
+</html>

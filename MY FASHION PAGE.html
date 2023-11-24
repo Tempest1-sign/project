@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SAINTS COLLECTION GARMENTS FACTORY</title>
+    <link rel="stylesheet" href="css/MY FASHION PAGE.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="wells">THE SAINTS COLLECTION GARMENTS FACTORY</h2>
+        <section class="hero">
+            <img src="images/cloth3.avif" alt="Hero image" width="500px" height="350px">
+            <p>Welcome to the saints collection garments factory</p>
+        </section>
+        <section class="products">
+            <h2>Product 1</h2>
+            <img src="images/images23.jfif" alt="Product 1 image">
+            <p>$50</p>
+            <button class="add-to-cart-btn">Add to cart</button>
+        </section>
+        <section class="products">
+            <h2>Product 2</h2>
+            <img src="images/download5.jfif" alt="Product 2 image">
+            <p>$75</p>
+            <button class="add-to-cart-btn">Add to cart</button>
+        </section>
+        <section class="products">
+            <h2>Product 3</h2>
+            <img src="images/images23.jfif" alt="Product 3 image">
+            <p>$100</p>
+            <button class="add-to-cart-btn">Add to cart</button>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">&copy; 2023 Fashion Store</div>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+
+    </footer>
+    <script>
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productSection = button.parentNode;
+                productSection.classList.toggle('added-to-cart');
+            });
+        });
+    </script>
+</body>
+</html>

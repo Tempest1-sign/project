@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./images/New folder/download5.jfif"> -->
+    <title>Fashion Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            color: #fff;
+        }
+        nav a:hover {
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 1s ease-in-out;
+        }
+        
+        section {
+            padding: 2em;
+        }
+
+        /* Style for the hero section */
+        #home.hero {
+            background-image: url('images/bh.jfif');
+            background-size: cover;
+            background-position: center;
+            color: #0f0f0f;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* Style for the heading in the hero section */
+        #home.hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the paragraph in the hero section */
+        #home.hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Style for the call-to-action button in the hero section */
+        #home.hero .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ff9900;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Apply a different background color when hovering over the button */
+        #home.hero .cta-button:hover {
+            background-color: #333;
+        }
+
+        @media screen and (max-width: 768px) {
+            #home.hero {
+                padding: 80px 10px;
+            }
+        }
+
+        .hero {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+        }
+
+        .collections, .designers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .collection-item, .designer-item {
+            max-width: 300px;
+        }
+
+        /* Style for the About Us section */
+        #about.about {
+            background-color: #bbb6b6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #about.about h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #about.about p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* Style for the Contact Us section */
+        #contact.contact {
+            background-color: #e6e6e6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #contact.contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #contact.contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact.contact form label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        #contact.contact form input,
+        #contact.contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact.contact form button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact.contact form button:hover {
+            background-color: #0056b3;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        form {
+            display: grid;
+            grid-gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>THE SAINTS COLLECTION</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="index feat.html">Featured Designers</a></li>
+                <li><a href="index about.html">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Discover Your Style</h2>
+        <p>Explore the latest trends and express your unique fashion sense.</p>
+        <a href="#collections" class="cta-button">Shop Now</a>
+    </section>
+
+    <section id="collections" class="collections">
+        <h2>Latest Collections</h2>
+        <div class="collection-item">
+            <img src="images/cloth3.avif" alt="Collection 1" width="300px">
+            <h3>Spring Elegance</h3>
+            <p>Explore the freshness of spring with our elegant collection.</p>
+        </div>
+        <div class="collection-item">
+            <img src="images/cloth5.avif" alt="Collection 2" width="300px" height="200px">
+            <h3>Urban Chic</h3>
+            <p>Stay trendy in the city with our urban chic fashion line.</p>
+        </div>
+        <!-- more -->
+    </section>
+
+    <section id="designers" class="designers">
+        <h2>Featured Designers</h2>
+        <div class="designer-item">
+            <img src="images/aya.avif" alt="Designer 1" width="250px">
+            <h3>Anna Smith</h3>
+            <p>Renowned for her unique and bold designs.</p>
+        </div>
+        <div class="designer-item">
+            <img src="images/doe.avif" alt="Designer 2" width="250px">
+            <h3>John Doe</h3>
+            <p>Master of minimalist fashion with a touch of sophistication.</p>
+        </div>
+        <!-- more -->
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Welcome to saints collection Fashion Hub, your go-to destination for the latest trends and timeless styles. Our mission is to empower individuals to express themselves through fashion.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="copyright">&copy; 2023 Fashion Store</div>
+        <div class="social-links">
+            <a href="#">Instagram</a><br>
+            <a href="#">Facebook</a><br>
+            <a href="#">Twitter</a><br>
+            <a href="wisdomakorede45@gmail.com">wisdomakorede45@gmail.com</a><br>
+            <a href="08145680618">08145680618</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Form submission
+            const contactForm = document.getElementById("contactForm");
+            contactForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                if (validateForm()) {
+                    alert("Form submitted successfully!");
+                }
+            });
+
+            // Form validation
+            function validateForm() {
+                const nameInput = document.getElementById("name");
+                const emailInput = document.getElementById("email");
+                const messageInput = document.getElementById("message");
+
+                if (nameInput.value.trim() === "") {
+                    alert("Please enter your name.");
+                    return false;
+                }
+
+                if (emailInput.value.trim() === "") {
+                    alert("Please enter your email.");
+                    return false;
+                } else if (!isValidEmail(emailInput.value.trim())) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+
+                if (messageInput.value.trim() === "") {
+                    alert("Please enter a message.");
+                    return false;
+                }
+
+                return true;
+            }
+
+            // Email validation
+            function isValidEmail(email) {
+                // Simple email validation regex
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
